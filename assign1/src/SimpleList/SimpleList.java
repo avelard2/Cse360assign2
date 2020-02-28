@@ -74,4 +74,29 @@ public class SimpleList {
 		}
 		return -1;
 	}
+	public int first()
+	{
+		return list[0];
+	}
+	public int size()
+	{
+		return count;
+	}
+	public void append(int n)
+	{
+		if(count == len - 1)
+		{
+			len = len + len/2;
+			int[] temp = new int[len];
+			
+			for(int i = 0; i < count; i++)
+			{
+				temp[i] = list[i];
+			}
+			list = temp;
+		}
+		count++;
+		list[count - 1] = n;
+		
+	}
 }
